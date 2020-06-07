@@ -1,16 +1,12 @@
 import React from "react";
-import NoteCard from "./noteCard";
 
-
-function Note(entities) {
-    return( 
-        <NoteCard
-            key={entities.id}
-            title={entities.title}
-            content={entities.content}
-        />
+function Note(props){
+    return(
+        <div className="note">
+            <h2>{props.title}</h2>
+            <p>{props.content}</p>
+        </div>
     );
-    
 }
 
 export default Note;

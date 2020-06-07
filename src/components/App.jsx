@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header.jsx";
 import notes from "../notes.js";
 import Footer from "./Footer.jsx";
-import NoteCard from "./noteCard.jsx";
+import Note from "./Note.jsx";
 
 function App () {
     return (
@@ -10,7 +10,7 @@ function App () {
         <div>
             <Header />
             {notes.map( entities => 
-                <NoteCard
+                <Note
                     key={entities.id}
                     title={entities.title}
                     content={entities.content}
