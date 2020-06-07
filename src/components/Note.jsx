@@ -1,13 +1,16 @@
 import React from "react";
-import notes from "../notes.js";
+import NoteCard from "./noteCard";
 
-function Note() {
-    return notes.map(props => 
-        <div className="note">
-            <h2>{props.title}</h2>
-            <p>{props.content}</p>
-        </div>
+
+function Note(entities) {
+    return( 
+        <NoteCard
+            key={entities.id}
+            title={entities.title}
+            content={entities.content}
+        />
     );
+    
 }
 
 export default Note;
